@@ -35,6 +35,7 @@ const storyData = {
     title: " CASO RESOLVIDO!",
     text: "Excelente trabalho! Ao rastrear o servidor remoto, você identificou que o ataque foi orquestrado por um grupo cibercriminoso externo explorando engenharia social. As credenciais foram revogadas e os dados recuperados com sucesso!",
     choices: [
+      { text: " Ver Créditos", target: "credits" },
       { text: " Jogar Novamente", target: "start" }
     ]
   },
@@ -42,6 +43,7 @@ const storyData = {
     title: " FIM DE JOGO - ERRO FORENSE",
     text: "Você acusou Mariana sem provas. Na verdade, ela foi vítima de phishing e não sabia do ataque. O verdadeiro invasor teve tempo de apagar os rastros e sumir com os dados.",
     choices: [
+      { text: " Ver Créditos", target: "credits" },
       { text: " Tentar Novamente", target: "start" }
     ]
   },
@@ -49,6 +51,7 @@ const storyData = {
     title: " FIM DE JOGO - PISTA FALSA",
     text: "Você perdeu tempo investigando as redes sociais de Alex enquanto o verdadeiro invasor limpava os servidores e criptografava os arquivos permanentemente.",
     choices: [
+      { text: " Ver Créditos", target: "credits" },
       { text: " Tentar Novamente", target: "start" }
     ]
   },
@@ -56,7 +59,15 @@ const storyData = {
     title: " FIM DE JOGO - ARDIL DO INVASOR",
     text: "O invasor usou a negociação para ganhar tempo, extrair mais dados estratégicos e bloquear todo o acesso da polícia aos sistemas.",
     choices: [
+      { text: " Ver Créditos", target: "credits" },
       { text: " Tentar Novamente", target: "start" }
+    ]
+  },
+  credits: {
+    title: " CRÉDITOS DO JOGO",
+    text: "Desenvolvimento e Criação:\n• Isabella Spelier\n• Ana Luiza\n\nFontes e Suporte Tecnológico:\n• Gemini (Inteligência Artificial)",
+    choices: [
+      { text: " Voltar ao Início", target: "start" }
     ]
   }
 };
@@ -64,7 +75,9 @@ const storyData = {
 function renderNode(nodeKey) {
   const node = storyData[nodeKey];
   document.getElementById("chapter-title").innerText = node.title;
-  document.getElementById("story-text").innerText = node.text;
+  
+  // Substitui quebras de linha '\n' por tags '<br>' no texto
+  document.getElementById("story-text").innerHTML = node.text.replace(/\n/g, "<br>");
   
   const choicesContainer = document.getElementById("choices-container");
   choicesContainer.innerHTML = "";
