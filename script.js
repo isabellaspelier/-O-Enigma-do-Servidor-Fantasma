@@ -11,7 +11,7 @@ e_inv:{end:"bad",back:"c1b",ch:"Fim de jogo",t:"Contra-ataque falho",sc:"bad",x:
 e_alx:{end:"bad",back:"c2a",ch:"Fim de jogo",t:"Acusação sem provas",sc:"bad",x:"Você prendeu o Alex sem provas. Ele era inocente e só tentava alertar a empresa. O verdadeiro criminoso manteve o acesso total e concluiu o roubo dos dados.",l:"Ter motivo não é ter prova. Acusar sem evidência deixa o culpado livre."},
 e_neg:{end:"bad",back:"c2b",ch:"Fim de jogo",t:"Armadilha de negociação",sc:"bad",x:"O chantagista usou a conversa para ganhar tempo, extrair informações confidenciais do seu sistema e expor os dados na dark web mesmo assim.",l:"Nunca negocie nem responda a golpistas sem apoio da equipe de resposta a incidentes."},
 win:{end:"win",back:"start",ch:"Caso encerrado",t:"Caso resolvido!",sc:"win",x:"Você identificou a técnica de invasão, isolou o malware e recuperou a chave de descriptografia antes do vazamento final. O sistema foi restaurado e a segurança da TechShield saiu mais forte.",l:"Phishing e trojans atacam pessoas, não só máquinas. Rastrear a origem antes de agir foi o que resolveu o caso."},
-cred:{ch:"Créditos",t:"Quem fez este caso",sc:"gh",x:"Criação:\nIsabella Spelier e Ana Luiza\n\nSuporte tecnológico:\nGemini (IA) e Claude (IA)",c:[["go","Voltar ao início","start"]]}
+cred:{ch:"Créditos",t:"Quem fez este caso",sc:"gh",x:"Criação:\nIsabella Spelier e Ana Luiza\n\nSuporte tecnológico:\nGemini (IA) e Claude (IA)\n\nApoio e aprendizado:\nAlura e Google Classroom",c:[["go","Voltar ao início","start"]]}
 };
 const sw=(c,w)=>`<g fill="none" stroke="${c}" stroke-width="${w||2}">`;
 const G=(x,y,s,c)=>`<g transform="translate(${x} ${y}) scale(${s})" class="float"><use href="#gh"/></g>`;
